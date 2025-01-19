@@ -1,8 +1,10 @@
+import DisplayList from "../features/display/DisplayList";
+import { Container } from "reactstrap";
 const HomePage=()=>{
   return(
-    <div>
-      HomePage:
-    </div>
+      <Container>
+       <DisplayList />
+      </Container>
   )
 };
 export default HomePage;
