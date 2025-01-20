@@ -1,8 +1,10 @@
 import DisplayList from "../features/display/DisplayList";
 import { Container } from "reactstrap";
-const HomePage=()=>{
+import SubHeader from "../components/SubHeader";
+const HomePage =()=>{
   return(
       <Container>
+        <SubHeader current='Home' />
        <DisplayList />
       </Container>
   )
