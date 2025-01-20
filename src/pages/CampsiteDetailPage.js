@@ -10,6 +10,7 @@ const CampsiteDetailPage = ()=>{
     <Container>
       <Row>
         <CampsiteDetail campsite={campsite} />
+        <CampsiteDetail campsite={campsite} />
       </Row>
     </Container>
   )
