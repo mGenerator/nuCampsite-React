@@ -1,12 +1,15 @@
 import { Button, Label, Col, FormGroup } from "reactstrap";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import { validateContactForm } from "../utils/validateContactForm";
 
 const ContactForm = () => {
+  //prints an updated version of initialValues object with the values entered on the form, also in json format
   const handleSubmit = (values, {resetForm})=>{
       console.log('form values:', values);
       console.log('in JSON format:', JSON.stringify(values));
       resetForm();
   }
+  
   return (
     //initalValues prop expects a javascript Object
     <Formik
@@ -20,6 +23,7 @@ const ContactForm = () => {
         feedback: ""
       }}
       onSubmit={handleSubmit}
+      validate={validateContactForm}
     >
       <Form>
         <FormGroup row>
@@ -32,6 +36,9 @@ const ContactForm = () => {
               name='firstName'
               className='form-control'
             />
+            <ErrorMessage name='firstName'>
+              {(msg)=><p className="text-danger">{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -44,6 +51,9 @@ const ContactForm = () => {
               name='lastName' 
               className='form-control'
             />
+            <ErrorMessage name='lastName'>
+              {(msg)=><p className="text-danger">{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -56,6 +66,9 @@ const ContactForm = () => {
               name='phoneNum'
               className='form-control'
             />
+            <ErrorMessage name='phoneNum'>
+              {(msg)=><p className="text-danger">{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
@@ -69,6 +82,9 @@ const ContactForm = () => {
               type='email'
               className='form-control'
             />
+            <ErrorMessage name='email'>
+              {(msg)=><p className="text-danger">{msg}</p>}
+            </ErrorMessage>
           </Col>
         </FormGroup>
         <FormGroup row>
