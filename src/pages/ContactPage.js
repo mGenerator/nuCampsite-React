@@ -16,7 +16,7 @@ const ContactPage=()=>{
             U.S.A.
           </address>
         </Col>
-        <Col>
+        <Col >
           <a
             role='button'
             className="btn btn-link"
