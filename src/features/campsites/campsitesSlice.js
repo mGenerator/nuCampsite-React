@@ -1,16 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { CAMPSITES } from "../../app/shared/CAMPSITES";
-import { useSelector } from "react-redux";
+
 
 const initialState = {
   campsitesArray: CAMPSITES
 }
+//createSlice is returns an object (that has been configured) after taking in configurator object as an argument
 const campsitesSlice = createSlice({
   name:"campsites",
   initialState
 });
 
 export const campsitesReducer = campsitesSlice.reducer;
+console.log('campsitesReducer: ' + campsitesReducer);
 
 export const selectAllCampsites = (state)=>{
   console.log(state);

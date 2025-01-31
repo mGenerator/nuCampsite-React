@@ -12,7 +12,7 @@ const DisplayList = () => {
     selectFeaturedPartner(state),
   ]);
 
-  console.log(items);
+  console.log('display items: ' + items);
   return (
     <Row>
       {items.map((item, idx) => {
