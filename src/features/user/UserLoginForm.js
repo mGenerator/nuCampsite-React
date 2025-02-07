@@ -6,7 +6,7 @@ import { Modal,ModalHeader, ModalBody,FormGroup, Label, Button } from "reactstra
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import defaultAvatar from '../../app/assets/img/unicorn.png'
 
-const UserLogicForm = ()=>{
+const UserLoginForm = ()=>{
 const [loginModalOpen, setLoginModalOpen]= useState(false);
 const currentUser = useSelector(selectCurrentUser);
 const dispatch = useDispatch();
@@ -107,4 +107,4 @@ const handleLogin = (values)=>{
     </>
   )
 }
-export default UserLogicForm;
+export default UserLoginForm;
