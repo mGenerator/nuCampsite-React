@@ -27,5 +27,5 @@ const CommentsList = ({campsiteId})=>{
     
   
   
-};
+}
 export default CommentsList;

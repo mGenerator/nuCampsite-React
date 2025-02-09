@@ -33,7 +33,7 @@ const CampsiteDetailPage = ()=>{
     <Container>
       {campsite && <SubHeader current={campsite.name} detail={true} />}
       <Row>
-        {content};
+        {content}
       </Row>
     </Container>
   )
